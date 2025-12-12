@@ -46,13 +46,13 @@ void loop() {
 
   // Check for valid reading
   if (isnan(temp)) {
-    Serial.println("❌ Failed to read from DHT sensor!");
+    Serial.println(" Failed to read from DHT sensor!");
     digitalWrite(redLed, HIGH);
     delay(2000);
     return;
   }
 
-  Serial.print("🌡 Temperature: ");
+  Serial.print(" Temperature: ");
   Serial.print(temp);
   Serial.println(" °C");
 
