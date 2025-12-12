@@ -7,7 +7,7 @@ const char* ssid = "Wokwi-GUEST";
 const char* password = "";           
 
 // ThingSpeak p 
-String apiKey = "69V6T79HCO97KN1E";   // Your ThingSpeak Write API Key
+String apiKey = "69V6T79HCO97KN1E";   
 const char* server = "https://api.thingspeak.com/update";
 
 //  DHT22 Sensor
@@ -36,7 +36,7 @@ void setup() {
     delay(500);
     Serial.print(".");
   }
-  Serial.println("\n✅ Wi-Fi Connected!");
+  Serial.println("\n Wi-Fi Connected!");
   digitalWrite(greenLed, HIGH);
 }
 
@@ -65,15 +65,15 @@ void loop() {
     int httpCode = http.GET();
 
     if (httpCode > 0) {
-      Serial.println("✅ Data sent to ThingSpeak!");
+      Serial.println(" Data sent to ThingSpeak!");
       digitalWrite(redLed, LOW);
     } else {
-      Serial.println("⚠️ Error sending data!");
+      Serial.println(" Error sending data!");
       digitalWrite(redLed, HIGH);
     }
     http.end();
   } else {
-    Serial.println("⚠️ Wi-Fi not connected!");
+    Serial.println(" Wi-Fi not connected!");
     digitalWrite(redLed, HIGH);
   }
 
